@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\project\\csharpworkspace\\StudentManagement\\StudentManagement\\StudentManagement.csproj": {}
+    "D:\\project\\mmcgitlab\\ASP.NET-CORE-study\\StudentManagement\\StudentManagement.csproj": {}
   },
   "projects": {
-    "D:\\project\\csharpworkspace\\StudentManagement\\StudentManagement\\StudentManagement.csproj": {
+    "D:\\project\\mmcgitlab\\ASP.NET-CORE-study\\StudentManagement\\StudentManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\project\\csharpworkspace\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
+        "projectUniqueName": "D:\\project\\mmcgitlab\\ASP.NET-CORE-study\\StudentManagement\\StudentManagement.csproj",
         "projectName": "StudentManagement",
-        "projectPath": "D:\\project\\csharpworkspace\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
+        "projectPath": "D:\\project\\mmcgitlab\\ASP.NET-CORE-study\\StudentManagement\\StudentManagement.csproj",
         "packagesPath": "C:\\Users\\typ\\.nuget\\packages\\",
-        "outputPath": "D:\\project\\csharpworkspace\\StudentManagement\\StudentManagement\\obj\\",
+        "outputPath": "D:\\project\\mmcgitlab\\ASP.NET-CORE-study\\StudentManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\typ\\AppData\\Roaming\\NuGet\\NuGet.Config",

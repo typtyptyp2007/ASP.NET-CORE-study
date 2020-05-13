@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZOzkZhaDcwIDwMEfHCjKG8t96bjZNyZhbzNJMKQ3Min7AwK4a/NFgPO2NMUqL//4ZmQ3PGOUKDgaKCQjCtLwAA==",
+  "dgSpecHash": "vRzwkfSz6k/79Hm7kUON7zMMOWfDwjfI5Q+tNYlHwTWvj0D26iOsJeOl0FqJshohVcN/CArf8NmJ5EPadm2A5g==",
   "success": true,
-  "projectFilePath": "D:\\project\\csharpworkspace\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
+  "projectFilePath": "D:\\project\\mmcgitlab\\ASP.NET-CORE-study\\StudentManagement\\StudentManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\typ\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\typ\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
