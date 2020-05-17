@@ -1,7 +1,3 @@
-.vs/StudentManagement/v16/Server/sqlite3/storage.ide
-.vs/StudentManagement/v16/Server/sqlite3/db.lock
-.vs/StudentManagement/v16/Server/sqlite3/storage.ide-wal
-.vs/StudentManagement/v16/Server/sqlite3/storage.ide-shm
-.vs/StudentManagement/v16/.suo
+.vs/StudentManagement/
 StudentManagement/obj/
 StudentManagement/bin/
