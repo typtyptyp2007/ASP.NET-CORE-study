@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using StudentManagement.Models;
 
 namespace StudentManagement
 {
@@ -28,6 +29,8 @@ namespace StudentManagement
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc(options => { options.EnableEndpointRouting = false; });
+
+            services.AddSingleton<IStudentRepository, MockStudentRepository>();
 
             //mvc core 只包含了 核心的MVC功能
             //mvc 包含了依赖于mvc core 以及相关的第三方常用的服务和方法

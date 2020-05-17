@@ -11,6 +11,10 @@ namespace StudentManagement.Controllers
     {
         private readonly IStudentRepository _studentRepository;
 
+        /// <summary>
+        /// 使用构造函数注入IStudentRepository
+        /// </summary>
+        /// <param name="studentRepository"></param>
         public HomeController(IStudentRepository studentRepository)
         {
             _studentRepository = studentRepository;
@@ -18,6 +22,7 @@ namespace StudentManagement.Controllers
 
         public string Index()
         {
+            //返回学生的名字
             return _studentRepository.GetStudent(1).Name;
             //return Json(new {id = "1", name = "张三"});
         }
