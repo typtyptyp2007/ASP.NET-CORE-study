@@ -26,5 +26,18 @@ namespace StudentManagement.Controllers
             return _studentRepository.GetStudent(1).Name;
             //return Json(new {id = "1", name = "张三"});
         }
+
+        //public JsonResult Details()
+        //{
+        //    var model = _studentRepository.GetStudent(1);
+        //    return Json(model);
+        //}
+
+        public ObjectResult Details()
+        {
+            var model = _studentRepository.GetStudent(1);
+            return new ObjectResult(model);
+        }
+
     }
 }
