@@ -33,10 +33,16 @@ namespace StudentManagement.Controllers
         //    return Json(model);
         //}
 
-        public ObjectResult Details()
+        //public ObjectResult Details()
+        //{
+        //    var model = _studentRepository.GetStudent(1);
+        //    return new ObjectResult(model);
+        //}
+
+        public IActionResult Details()
         {
             var model = _studentRepository.GetStudent(1);
-            return new ObjectResult(model);
+            return View(model);
         }
 
     }
