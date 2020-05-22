@@ -42,7 +42,12 @@ namespace StudentManagement.Controllers
         public IActionResult Details()
         {
             var model = _studentRepository.GetStudent(1);
-            return View("~/MyViews/Test.cshtml");
+
+            ViewData["PageTitle"] = "学生详情";
+            ViewData["Student"] = model;
+
+            //return View("~/MyViews/Test.cshtml");
+            return View();
         }
 
     }
