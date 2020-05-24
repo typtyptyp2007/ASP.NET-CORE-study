@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using StudentManagement.Models;
+using StudentManagement.ViewModels;
 
 namespace StudentManagement.Controllers
 {
@@ -20,11 +21,17 @@ namespace StudentManagement.Controllers
             _studentRepository = studentRepository;
         }
 
-        public string Index()
+        //public string Index()
+        //{
+        //    //返回学生的名字
+        //    return _studentRepository.GetStudent(1).Name;
+        //    //return Json(new {id = "1", name = "张三"});
+        //}
+
+        public IActionResult Index()
         {
-            //返回学生的名字
-            return _studentRepository.GetStudent(1).Name;
-            //return Json(new {id = "1", name = "张三"});
+            var students = _studentRepository.GetAllStudents();
+            return View(students);
         }
 
         //public JsonResult Details()
@@ -41,13 +48,25 @@ namespace StudentManagement.Controllers
 
         public IActionResult Details()
         {
-            var model = _studentRepository.GetStudent(1);
+            //var model = _studentRepository.GetStudent(1);
 
-            ViewData["PageTitle"] = "学生详情";
-            ViewData["Student"] = model;
+            //ViewData["PageTitle"] = "学生详情";
+            //ViewData["Student"] = model;
+
+            ////将PageTitle和Student模型对象存储在ViewBag
+            ////我们正在使用动态属性PageTitle和Student
+            //ViewBag.PageTitle = "学生详情";
+            //ViewBag.Student = model;
+
+            //实例化HomeDetailsViewModel并存储Student详细信息和PageTitle
+            var homeDetailsViewModel = new HomeDetailsViewModel()
+            {
+                Student = _studentRepository.GetStudent(1),
+                PageTitle = "学生详细信息"
+            };
 
             //return View("~/MyViews/Test.cshtml");
-            return View();
+            return View(homeDetailsViewModel);
         }
 
     }

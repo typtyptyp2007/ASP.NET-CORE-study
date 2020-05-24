@@ -1,10 +1,10 @@
-﻿@using StudentManagement.Models
+﻿@model StudentManagement.ViewModels.HomeDetailsViewModel
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
 </head>
 <body>
-    <h3>@ViewData["PageTitle"]</h3>
+@*<h3>@ViewData["PageTitle"]</h3>
     
     @{
         var student = ViewData["Student"] as  Student;
@@ -18,7 +18,30 @@
     </div>    
     <div>
         班级名称：@student.ClassName
-    </div>
+    </div>*@
+
+@*<h3>@ViewBag.PageTitle</h3>
+
+<div>
+    姓名：@ViewBag.Student.Name
+</div>
+<div>
+    邮箱：@ViewBag.Student.Email
+</div>    
+<div>
+    班级名称：@ViewBag.Student.ClassName
+</div>*@
+
+    <h3>@Model.PageTitle</h3>
+<div>
+    姓名：@Model.Student.Name
+</div>
+<div>
+    邮箱：@Model.Student.Email
+</div>    
+<div>
+    班级名称：@Model.Student.ClassName
+</div>
 
 </body>
 </html>

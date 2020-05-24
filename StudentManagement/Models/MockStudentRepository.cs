@@ -23,5 +23,10 @@ namespace StudentManagement.Models
         {
             return _studentsList.FirstOrDefault(a => a.Id == id);
         }
+
+        public IEnumerable<Student> GetAllStudents()
+        {
+            return _studentsList;
+        }
     }
 }
