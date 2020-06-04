@@ -94,24 +94,26 @@ namespace StudentManagement
             app.UseStaticFiles();
 
             //app.UseMvcWithDefaultRoute(); //.net core3.1已经弃用此方法
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            //app.UseMvc();
+            app.UseMvc(routes => { routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}"); });
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //        name: "default",
+            //        template: "{controller=Home}/{action=Index}/{id?}");
+            //});
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    //throw new Exception("您的请求在管道中发生了一些错误，请检查");
-                    //await context.Response.WriteAsync($"Hosting Environment:{env.EnvironmentName}");
-                    await context.Response.WriteAsync($"hello world");
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapGet("/", async context =>
+            //    {
+            //        //throw new Exception("您的请求在管道中发生了一些错误，请检查");
+            //        //await context.Response.WriteAsync($"Hosting Environment:{env.EnvironmentName}");
+            //        await context.Response.WriteAsync($"hello world");
 
-                    //logger.LogInformation("MW3:处理请求，并生成响应");
-                });
-            });
+            //        //logger.LogInformation("MW3:处理请求，并生成响应");
+            //    });
+            //});
         }
     }
 }

@@ -46,7 +46,7 @@ namespace StudentManagement.Controllers
         //    return new ObjectResult(model);
         //}
 
-        public IActionResult Details()
+        public IActionResult Details(int id)
         {
             //var model = _studentRepository.GetStudent(1);
 
@@ -61,7 +61,7 @@ namespace StudentManagement.Controllers
             //实例化HomeDetailsViewModel并存储Student详细信息和PageTitle
             var homeDetailsViewModel = new HomeDetailsViewModel()
             {
-                Student = _studentRepository.GetStudent(1),
+                Student = _studentRepository.GetStudent(id),
                 PageTitle = "学生详细信息"
             };
 
