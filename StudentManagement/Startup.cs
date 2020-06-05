@@ -96,6 +96,9 @@ namespace StudentManagement
             //app.UseMvcWithDefaultRoute(); //.net core3.1已经弃用此方法
             //app.UseMvc();
             app.UseMvc(routes => { routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}"); });
+
+            //app.UseMvc();
+
             //app.UseMvc(routes =>
             //{
             //    routes.MapRoute(

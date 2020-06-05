@@ -8,6 +8,7 @@ using StudentManagement.ViewModels;
 
 namespace StudentManagement.Controllers
 {
+    //[Route("Home")]
     public class HomeController : Controller
     {
         private readonly IStudentRepository _studentRepository;
@@ -28,6 +29,9 @@ namespace StudentManagement.Controllers
         //    //return Json(new {id = "1", name = "张三"});
         //}
 
+        //[Route("")]
+        //[Route("Index")]
+        //[Route("~/")]
         public IActionResult Index()
         {
             var students = _studentRepository.GetAllStudents();
@@ -46,7 +50,8 @@ namespace StudentManagement.Controllers
         //    return new ObjectResult(model);
         //}
 
-        public IActionResult Details(int id)
+        //[Route("Details/{id?}")]
+        public IActionResult Details(int? id)
         {
             //var model = _studentRepository.GetStudent(1);
 
@@ -61,7 +66,7 @@ namespace StudentManagement.Controllers
             //实例化HomeDetailsViewModel并存储Student详细信息和PageTitle
             var homeDetailsViewModel = new HomeDetailsViewModel()
             {
-                Student = _studentRepository.GetStudent(id),
+                Student = _studentRepository.GetStudent(id??1),
                 PageTitle = "学生详细信息"
             };
 
